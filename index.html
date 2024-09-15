@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarsSpot</title>
+    <link rel="icon" href="images/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-darkWhite mx-auto overflow-x-hidden scroll-smooth">
+    <!-- Navigations -->
+    <nav class="py-4 gap-2.5">
+      <!-- Frame 4090 -->
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <div class="w-[300px]">
+          <img src="images/logo.svg" alt="CarsSpot Logo" />
+        </div>
+
+        <!-- Menu items-->
+        <div
+          class="hidden md:flex whitespace-nowrap gap-6 font-roboto-flex font-normal text-base text-center text-darkGray"
+        >
+          <a href="#gallery-section">Galeria zdjęć</a>
+          <a href="#">FaQ</a>
+        </div>
+
+        <!-- Button -->
+        <div
+          class="hidden md:flex flex-col items-end justify-center w-[300px] gap-2.5"
+        >
+          <a
+            href="tel:0"
+            class="button gap-2 font-roboto-flex text-[15px] leading-normal tracking-[-0.02em] text-center text-darkWhite bg-darkBlue"
+            >Zadzwoń do nas</a
+          >
+        </div>
+
+        <!-- Hamburger button -->
+        <button
+          id="menu-hamburger"
+          class="block hamburger md:hidden focus:outline-none text-darkGray"
+        >
+          <span class="hamburger-top"></span
+          ><span class="hamburger-middle"></span
+          ><span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden"></div>
+      <div
+        id="menu"
+        class="hidden md:hidden absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-darkWhite text-darkGray sm:w-auto sm:self-center left-6 right-6 drop-shadow-md z-10"
+      >
+        <a href="#gallery-section" class="border-b border-darkGray"
+          >Galeria Zdjęć</a
+        >
+        <a href="#" class="border-b border-darkGray">FaQ</a>
+      </div>
+    </nav>
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+    <!-- Hero -->
+    <section
+      class="py-[120px] gap-12 h-[825px] container mx-auto flex flex-col justify-between relative"
+    >
+      <!-- Element -->
+      <img
+        src="images/road.svg"
+        class="absolute z-[-5] top-[120px] sm:top-[-79px] right-[90px] md:right-[-40px] scale-[2] md:scale-100"
+      />
+
+      <!-- Container -->
+      <div class="container flex flex-col gap-12">
+        <!-- Content -->
+        <div
+          class="flex flex-col font-normal gap-8 text-darkGray text-center md:text-left"
+        >
+          <h1
+            class="font-bebas-neue text-[76px] leading-[84px] tracking-[-0.04em]"
+          >
+            sprzedajemy samochody<br />z europy
+          </h1>
+          <p class="font-roboto-condensed text-base">
+            Kup komfortowy pojazd, aby każda podróż<br />była wyjątkowym
+            przeżyciem.
+          </p>
+        </div>
+
+        <!-- Buttons group -->
+
+        <div
+          class="gap-6 flex flex-row font-roboto-flex text-[15px] leading-normal tracking-[-0.02em] justify-center md:justify-start z-10"
+        >
+          <a
+            href="#gallery-section"
+            class="text-darkWhite bg-darkBlue button gap-2"
+            >Zobacz zdjęcia</a
+          >
+          <a
+            href="tel:0"
+            class="text-darkBlue bg-darkWhite border-darkBlue border border-solid button gap-2"
+            >Zadzwoń do nas</a
+          >
+        </div>
+      </div>
+
+      <!-- Hero-group 254 -->
+      <div
+        class="absolute bottom-[35px] sm:bottom-0 md:bottom-[120px] xsm:right-[-104px] sm:right-[-108px] md:right-[-193px] lg:right-[-174px] xl:right-[-120px]"
+      >
+        <!-- Hero-group 252 + rectangle 296 -->
+        <div class="relative">
+          <img src="images/cars.png" alt="" class="absolute" />
+          <img src="images/shadow.png" alt="" class="opacity-70" />
+          <div
+            class="bg-[#1F4D60] absolute w-[14.66%] h-[20.98%] top-[14%] right-[35%] opacity-70 z-[-1]"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <!-- Headers block -->
+    <section class="container mx-auto pt-20">
+      <!-- Frame 2307 -->
+      <div class="flex flex-col gap-6">
+        <!-- Frame 40571 -->
+        <div>
+          <p
+            class="font-roboto-condensed font-normal text-[21px] leading-normal text-darkBlue"
+          >
+            Prezentacja firmy
+          </p>
+
+          <!-- Frame 2302 -->
+          <div class="gap-8">
+            <p class="font-bebas-neue font-normal text-[40px] leading-[48px]">
+              Zobacz naszą Galerię zdjęć
+            </p>
+          </div>
+        </div>
+
+        <!-- Frame 40569 -->
+        <div class="gap-12 flex">
+          <!-- Frame 40570 -->
+          <!-- Założyłem, że "Samochody osobowe" i "Samochody dostawcze" mają być docelowo buttonami, więc utworzyłem klasę button-active, którą będzie można potem usunąć/dodać w JS. W tym też celu musiałem przesunąć margin bottom z elementu Frame 40570 na button -->
+
+          <a
+            href="#"
+            class="font-roboto-flex font-normal text-[15px] leading-normal tracking-[-0.02em] text-[#000000] button-active"
+            >Samochody osobowe</a
+          >
+
+          <a
+            href="#"
+            class="font-roboto-flex font-normal text-[15px] leading-normal tracking-[-0.02em] text-[#000000]"
+          >
+            Samochody dostawcze
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------------- -->
+
+    <!-- Gallery block -->
+    <section
+      id="gallery-section"
+      class="flex flex-col items-center py-20 gap-12"
+    >
+      <!-- Frame 2284 -->
+      <div
+        id="gallery"
+        class="container flex items-center gap-16 transition-transform duration-1000"
+      >
+        <img
+          src="images/gallery1.png"
+          alt="samochód nr 1"
+          class="gallery-img"
+        />
+        <img
+          src="images/gallery2.png"
+          alt="samochód nr 2"
+          class="gallery-img"
+        />
+        <img
+          src="images/gallery3.png"
+          alt="samochód nr 3"
+          class="gallery-img"
+        />
+        <img
+          src="images/gallery4.png"
+          alt="samochód nr 4"
+          class="gallery-img"
+        />
+        <img
+          src="images/gallery5.png"
+          alt="samochód nr 5"
+          class="gallery-img"
+        />
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <!-- 5 dots + muted -->
+
+        <div class="flex justify-between w-20 py-2">
+          <img src="images/active-dot.svg" class="dot" data-index="0" />
+          <img src="images/muted-dot.svg" class="dot" data-index="1" />
+          <img src="images/muted-dot.svg" class="dot" data-index="2" />
+          <img src="images/muted-dot.svg" class="dot" data-index="3" />
+          <img src="images/muted-dot.svg" class="dot" data-index="4" />
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------------------------------------------------------- -->
+
+    <!-- SEO -->
+    <section
+      class="flex justify-center items-center py-[88px] bg-darkGray text-lightWhite"
+    >
+      <!-- Frame 4350 -->
+      <div class="container flex flex-col gap-20 sm:flex-row justify-between">
+        <!-- SEO element 1 -->
+        <div class="flex flex-col gap-4 max-w-[576px]">
+          <h1
+            class="font-bebas-neue font-normal text-[25px] leading-normal tracking-[-0.03em]"
+          >
+            Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
+            nulla commodo.
+          </h1>
+          <!-- Frame 4183 -->
+          <div
+            class="flex flex-col items-start gap-6 font-roboto-condensed font-normal text-[14px] leading-normal"
+          >
+            <p class="">
+              Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
+              Donec egestas, nisl vehicula feugiat ornare, diam turpis efficitur
+              mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+            </p>
+
+            <button
+              class="flex content-center items-center border-b-[1.5px] border-whiteText text-whiteText pb-[6px] gap-[6px]"
+            >
+              <a href="#" class="">Rozwiń</a>
+              <img src="images/arrow.svg" alt="strzałka" />
+            </button>
+          </div>
+        </div>
+
+        <!-- SEO element 2 -->
+        <div class="flex flex-col gap-4 max-w-[576px]">
+          <h1
+            class="font-bebas-neue font-normal text-[25px] leading-normal tracking-[-0.03em]"
+          >
+            Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
+            nulla commodo.
+          </h1>
+          <!-- Frame 4183 -->
+          <div
+            class="flex flex-col items-start gap-6 font-roboto-condensed font-normal text-[14px] leading-normal"
+          >
+            <p class="">
+              Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
+              Donec egestas, nisl vehicula feugiat ornare, diam turpis efficitur
+              mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+            </p>
+
+            <button
+              class="flex content-center items-center border-b-[1.5px] border-whiteText text-whiteText pb-[6px] gap-[6px]"
+            >
+              <a href="#" class="">Rozwiń</a>
+              <img src="images/arrow.svg" alt="strzałka" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Postanowiłem zrezygnować z paddingu na osi x na rzecz dodatkowego div o szerokości .container, aby zachować spójność z sekcją SEO -->
+    <footer
+      class="flex justify-center items-center py-6 border-t border-solid text-lightWhite bg-darkGray font-roboto-condensed text-base"
+    >
+      <!-- Container -->
+      <div class="container flex justify-between">
+        <!-- Frame 40565 -->
+        <div class="gap-4 flex">
+          <p class="font-bold">Cars Spot</p>
+        </div>
+        <!-- Frame 40550 -->
+        <div class="gap-6">
+          <a href="#" class="font-normal underline">Polityka prywatności</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
